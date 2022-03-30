@@ -4,6 +4,7 @@
 @import "./global/header.css";
 @import "./utilities/componentes.css";
 @import "./utilities/formulario.css";
+@import "./utilities/animacao.css";
 @import "./orcamento/orcamento.css";
 @import "./home/introducao.css";
 @import "./home/tecnologia.css";
