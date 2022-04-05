@@ -25,8 +25,10 @@
       <a href="./">
         <img src="./img/bikcraft.svg" width="136" height="32" alt="Bikcraft">
       </a>
-      <nav aria-label="primaria">
-        <ul class="header-menu font-1-m cor-00">
+
+      <nav id="nav" aria-label="primaria">
+        <button id="btn-mobile" aria-label="Abrir Menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false"><span id="hamb"></span></button>
+        <ul id="menu" role="menu" class="header-menu font-1-m cor-00">
           <li><a href="./bicicletas.html">Bicicletas</a></li>
           <li><a href="./seguros.html">Seguros</a></li>
           <li><a href="./contato.html">Contato</a></li>
@@ -51,24 +53,24 @@
   </main>
 
   <article class="bicicletas-lista">
-    <h2 class="container font-1-xxl">escolha a sua<span class="cor-p01">.</span></h2>
+    <h2 class="container font-1-xxl fadeInLeft" data-anime="200">escolha a sua<span class="cor-p01">.</span></h2>
 
     <ul>
-      <li>
+      <li class="fadeInUp" data-anime="300">
         <a href="./bicicletas/magic.html">
           <img src="./img/bikes/magic-home.jpg" width="920" height="1040" alt="Bicicleta Preta">
           <h3 class="font-1-xl">Magic Might</h3>
           <span class="font-2-m cor-08">R$ 2499</span>
         </a>
       </li>
-      <li>
+      <li class="fadeInUp" data-anime="300">
         <a href="./bicicletas/nebula.html">
           <img src="./img/bikes/nebula-home.jpg" width="920" height="1040" alt="Bicicleta Preta">
           <h3 class="font-1-xl">Nebula Cosmic</h3>
           <span class="font-2-m cor-08">R$ 2999</span>
         </a>
       </li>
-      <li>
+      <li class="fadeInUp" data-anime="300">
         <a href="./bicicletas/nimbus.html">
           <img src="./img/bikes/nimbus-home.jpg" width="920" height="1040" alt="Bicicleta Preta">
           <h3 class="font-1-xl">Nimbus Stark</h3>

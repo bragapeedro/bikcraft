@@ -1,4 +1,4 @@
-//Ativar links de navegação
+//ATIVAR LINKS DE NAVEGAÇÃO
 const links = document.querySelectorAll(".header-menu a");
 
 function ativarLink(link) {
@@ -11,7 +11,7 @@ function ativarLink(link) {
 
 links.forEach(ativarLink);
 
-//Ativar itens do orçamento dinamicamente
+//ATIVAR ITENS DO ORÇAMENTO DINAMICAMENTE
 const parametros = new URLSearchParams(location.search);
 function ativarProduto(parametros) {
   const elemento = document.getElementById(parametros);
@@ -22,7 +22,7 @@ function ativarProduto(parametros) {
 
 parametros.forEach(ativarProduto);
 
-//Expandir perguntas
+//EXPANDIR PERGUNTAS
 const perguntas = document.querySelectorAll(".perguntas button");
 
 function ativarPergunta(event) {
@@ -40,7 +40,7 @@ function eventosPerguntas(pergunta) {
 }
 perguntas.forEach(eventosPerguntas);
 
-//Galeria de Bikes
+//GALERIA DE BIKES
 const galeria = document.querySelectorAll(".bicicleta-imagens img");
 const galeriaContainer = document.querySelector(".bicicleta-imagens");
 
@@ -58,7 +58,27 @@ function eventosGaleria(img) {
 
 galeria.forEach(eventosGaleria);
 
-//Animação
+//ANIMAÇÃO
 if (window.SimpleAnime) {
   new SimpleAnime();
 }
+
+//MENU MOBILE
+const btnMobile = document.getElementById("btn-mobile");
+
+function toggleMenu(event) {
+  if (event.type === "touchstart") event.preventDefault();
+
+  const nav = document.getElementById("nav");
+  nav.classList.toggle("active");
+  const active = nav.classList.contains("active");
+  event.currentTarget.setAttribute("aria-expanded", active);
+  if (active) {
+    event.currentTarget.setAttribute("aria-label", "Fechar Menu");
+  } else {
+    event.currentTarget.setAttribute("aria-label", "Abrir Menu");
+  }
+}
+
+btnMobile.addEventListener("click", toggleMenu);
+btnMobile.addEventListener("touchstart", toggleMenu);
